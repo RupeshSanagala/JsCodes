@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let emp={
+            id:4569,
+            ename:"rupesh",
+            role:"PAT",
+            address:{
+                houseno: 12,
+                city: "ongole",
+                state:"Ap"
+
+            },
+            hobbies: function(){
+                return `my name is ${this.ename}`
+            }
+        }
+        document.write(`id: ${emp.id}  <br> ename: ${emp.ename} <br>`)
+        document.write(`city: ${emp.address.city}  <br> state: ${emp.address.state} <br>`)
+        document.write(`function: ${emp.hobbies()} <br>`)
+
+        //array of object
+
+        let std = [
+              {id:4568,name:'druva',age:56,gender:"male"},
+              {id:4560,name:'deva',age:36,gender:"male"},
+              {id:4568,name:'jeeva',age:26,gender:"Female"}
+
+        ]
+        document.write(std[0].name ,"<br>");
+        for(let s of std){
+            document.write(`Id: ${s.id} <br> Name: ${s.name} <br> age: ${s.age} <br>`)
+        }
+    </script>
+</body>
+</html>

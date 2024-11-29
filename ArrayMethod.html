@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let students =['rupesh','ramesh','rajesh','rakesh','ravi'];
+        console.log(students);
+        console.log(students[4]);
+        console.log("array_length",students.length); 
+        console.log("array_size",students.length-1);
+        //iterate over array
+        for(let i=0;i<students.length;i++){
+               document.write(students[i]+",")
+        }
+        document.write("<br>========================<br>");
+        // for of
+        for(let s of students){
+            document.write(s+",")
+        }
+        document.write("<br>========================<br>");
+        //for in
+        for(let s in students){
+            document.write(s+",")
+        }
+        //1.push(): it is used to insert values at last index of an array
+        students.push("sai","ramu","abhi")
+        //2.pop(): it remove values from last index of an array.
+        students.pop();
+        console.log(students)
+        //3.unshift(): it is used to insert values at starting index of an array
+        students.unshift("eswar","deva");
+        //4.shift(): it remove values from starting index of an array.
+        students.shift();
+        console.log(students)
+        //5.splice(startIndex,deleteCount,valuesToAdd):It is used to insert and remove elements from middle index of an array.
+        students.splice(2,2);
+        console.log(students)
+        students.splice(2,0,"amit","ajay") // add two values from second index
+        console.log(students)
+        students.splice(2,2,"amit","ajay") // remove two values from second index
+        //6.toString(): It is used to convert array data into string
+        console.log(students.toString())
+        //7.join(separator): It is used to convert array data into string, it take one operator to separate values.
+        console.log(students.join())
+        console.log(students.join("*"))
+        console.log(students.join(" "))
+
+</script>
+</body>
+</html>

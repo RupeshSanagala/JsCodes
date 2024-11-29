@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//1. simple fun or default function
+function work(){
+    return "current working";
+}
+
+let op = work();
+console.log(op);
+document.write(op, "<br>")
+
+
+//2. parameterized function
+
+function add(a,b){
+    let sum = a+b;
+    console.log(sum);
+    return sum;
+}
+document.write(add(100,400),"<br>")
+add(100,129);
+
+// 3.Anonymous function = function which has no name and for calling it we have to store result in variable.
+
+let ans = function (x,y){
+    return x+y;
+}
+document.write(ans(5,6),"<br>")
+
+// 4.Arrow function(lambda function): function which has no name and no function keyword
+
+let mul = (c,d) => {
+    return c*d;
+}
+document.write(mul(2,4),"<br>")
+
+// 5. optional parameterized function: function in which parameter will be optional
+
+let fullname = (fname,lname,mname)=>{
+    return fname+lname+mname+"<br>"
+}
+document.write(fullname("rupesh","sanagala"))
+document.write(fullname("rupesh","sanagala",".M"),"<br>")
+
+//6. rest parameterized function: When we dont know how many parameters required. In this we use spread operator(...)
+
+let stdList =(...stdList) =>{
+    return stdList
+}
+document.write(stdList("wtw4t4","wtw35y3","w46y53y"),"<br>");
+
+
+const numbersOne = [1, 2, 3];
+const numbersTwo = [4, 5, 6];
+const numbersCombined = [...numbersOne, ...numbersTwo];
+
+document.write(numbersCombined,"<br>")
+</script>
+</body>
+</html>
