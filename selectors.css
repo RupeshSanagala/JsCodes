@@ -1,0 +1,12 @@
+#p1{
+    color: blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.p{
+    color: blueviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p{
+    color: darkcyan;
+    font-weight: bold;
+}

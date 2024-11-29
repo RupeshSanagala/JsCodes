@@ -1,0 +1,44 @@
+/* #header{
+    
+      
+            border: 2px solid red;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            left: 58px;
+            position: relative;
+            top: 8px;
+} */
+
+
+#parent{
+    border: 10px solid green;
+    position: relative;
+    left: 30px;
+}
+
+#child{
+border: 10px solid red;
+position: absolute;
+left: 10px;
+top: 0px;
+}
+
+#small{
+    border: 3px solid blue;
+}
+.pos-fixed img{
+   
+    height: 20px;
+    border: 5px solid blue;
+    width: 20px;
+    position:fixed;
+    right: 0px;
+    
+}
+
+#small{
+    position: sticky;
+    top: 20px;
+}
+
