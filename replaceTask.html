@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
+        #div1 {
             border: 1px solid black;
             height: 200px;
             width: 300px;
@@ -13,16 +13,59 @@
             border-radius: 20px;
             background-color: chartreuse;
         }
+
+        #div2 {
+            width: 30%;
+            
+            display: flex;
+            margin: 50px;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        /* .btn {
+            margin: 10px;
+        } */
     </style>
 </head>
 <body>
-    <div>
-        <p>Hi friends shall we go to somewhere at the end of the year.Just inform me friends if you are with it.</p>
-        
-        <button type="button">replace</button>
-        <button type="button">replaceAll</button>
-        
+    <div id="div1">
+        <p id="p">Hi friends shall we go to somewhere at the end of the year. Just inform me friends if you are with it.</p>
     </div>
-    
+    <div id="div2" class="div">
+        <label for="oldText">Old Text</label>
+        <input type="text" id="oldText">
+        <label for="newText">New Text</label>
+        <input type="text" id="newText">
+        <button type="button" class="btn" onclick="replaceOld()">Replace</button>
+        <button type="button" class="btn" onclick="replaceAllOld()">Replace All</button>
+    </div>
+
+    <script>
+        function replaceOld() {
+            const input1 = document.getElementById('oldText').value;
+            const input2 = document.getElementById("newText").value;
+            const pElement = document.getElementById("p");
+
+            if (pElement.innerText.includes(input1)) {
+                pElement.innerText = pElement.innerText.replace(input1, input2);
+            } else {
+                alert("Input not found in the content.");
+            }
+        }
+
+        function replaceAllOld() {
+            const input1 = document.getElementById('oldText').value;
+            const input2 = document.getElementById("newText").value;
+            const pElement = document.getElementById("p");
+
+            if (pElement.innerText.includes(input1)) {
+                const regex = new RegExp(input1, 'g');
+                pElement.innerText = pElement.innerText.replace(regex, input2);
+            } else {
+                alert("Input not found in the content.");
+            }
+        }
+    </script>
 </body>
 </html>
