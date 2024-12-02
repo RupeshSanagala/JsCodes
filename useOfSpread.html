@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let frontEnd=["html","css","javaScript","React"];
+        console.log(frontEnd)
+        let backEnd=["Java","python","C","C++"];
+        console.log(backEnd)
+        //use of concat:merge two or more array
+        let fullStack = frontEnd.concat(backEnd);
+        console.log(fullStack)
+        // use of spread operator: merge two or more array
+        let fullStack1= [...backEnd,...frontEnd,".net","Angular"];
+        console.log(fullStack1);
+        document.writeln(`${fullStack1}<br>`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let msg = "Hi this is rupesh and just call me rupesh";
+        document.write(`${msg} <br>`)
+        document.write(`${msg.length} <br>`)
+        document.write(`msg.toLocaleUpperCase(): ${msg.toLocaleUpperCase()} <br>`)
+        //use of indexOf()
+        document.write(`msg.indexOf("rupesh"): ${msg.indexOf("rupesh")} <br>`)
+        //use of lastIndexOf
+        document.write(`msg.lastIndexOf('rupesh'): ${msg.lastIndexOf('rupesh')} <br>`)
+        //use of search
+        document.write(`msg.search("call"): ${msg.search("call")} <br>`)
+        //use of slice
+        document.write(`msg.slice(2,9): ${msg.slice(2,15)} <br>`)
+        document.write(`msg.slice(-20): ${msg.slice(-20)} <br>`)
+        document.write(`msg.slice(-20,-10): ${msg.slice(-20,-10)} <br>`)
+        //use of substring
+        document.write(`msg.substring(10): ${msg.substring(10)} <br>`)
+        document.write(`msg.substring(0,10): ${msg.substring(0,10)} <br>`)
+        //use  of substr
+        document.write(`msg.substr(2,20): ${msg.substr(11,20)} <br>`)
+        //use of charAt
+        document.write(`msg.charAt(20): ${msg.charAt(20)} <br>`)
+        //use of charCodeAt
+        document.write(`msg.charCodeAt(20): ${msg.charCodeAt(20)} <br>`)
+        //use of replace()
+        document.write(`msg.replace("this is","my name is"): ${msg.replace("this is","my name is")}<br>`)
+        // "/i" && "/ig" will help us to consider as not case-sensitive
+        document.write(`msg.replace("this is","my name is"): ${msg.replace(/THIS IS/i,"my name is")}<br>`)
+        document.write(`msg.replace("rupesh","narasimha"): ${msg.replace(/Rupesh/ig,"narasimha")}<br>`)
+        document.write(`msg.replaceAll("rupesh","narasimha"): ${msg.replaceAll("rupesh","narasimha")}<br>`)
+
+        //use of split(separator)
+        document.write(`msg.split(""): ${msg.split()} <br>`)
+        
+        document.write(`msg.split(''): ${msg.split('')} <br>`)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let std=["rupesh","ravi","ramu","rajesh"]
+
+        //1.forEach(): it call another method once for each array element
+        std.forEach((val,index)=>{
+            document.writeln(`${val},`);
+        });
+        document.writeln(`<br>`);
+        
+        //2.map(): It call another method once for each array element and it return new array after performing manipulation with array data
+        let num = [1,4,6,7,3,89,34,23,47];
+        document.writeln(`${num}<br>`)
+
+        let mapOut= num.map((val,index) =>{
+            return val*2;
+        });
+        document.writeln(`${mapOut}<br>`);
+
+        // 3.filter(): It call another method once for each array element and it return new array of those values who satisfy given condition.
+
+        let filterOut = num.filter((val,index)=>{
+            return val%2!=0;
+        });
+        document.writeln(`${filterOut}<br>`);
+        
+        //4.every():It call another method once for each array element and it return true value if all array element satisfy given condition.
+
+        let everyOut = num.every((val,index)=>{
+            return val >0;
+        });
+        document.writeln(`${everyOut}<br>`);
+
+        // 5.some(): It call another method once for each array element and it return true if some of the array element are satisfying given condition.
+
+        let someOut=num.some((val,index)=>{
+            return val>10;
+        });
+        document.writeln(`${someOut}<br>`)
+
+        //6.reduce(or)reduceRight: It  return array data as a single value.It takes two parameters prevVal,nextVal
+
+        let add = num.reduce((prev,next)=>{
+            return prev+next;
+        });
+        document.writeln(`${add}<br>`)
+    </script>
+</body>
+</html>
